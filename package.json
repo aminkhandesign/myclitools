@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "some cli tools",
   "main": "index.js",
-  "bin":{
-    "loadsites":"loadsite.js"
-    
+  "bin": {
+    "hello": "greeting.js",
+    "loadsites": "loadsite.js",
+    "runbash": "bin/runbash.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,6 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/aminkhandesign/myclitools.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
