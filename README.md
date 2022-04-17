@@ -1,2 +1,3 @@
 # myclitools
-some cli tools
+
+A collection of cli tools
