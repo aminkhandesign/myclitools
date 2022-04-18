@@ -1,6 +1,6 @@
 {
   "name": "@aminkhandesign/myclitools",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "some cli tools",
   "main": "index.js",
   "publishConfig": {
