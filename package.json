@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "some cli tools",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "hello": "greeting.js",
     "loadsites": "loadsite.js",
