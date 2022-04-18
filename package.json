@@ -7,7 +7,7 @@
     "access": "public"
   },
   "bin": {
-    "hello": "greeting.js",
+    "wakeup": "wakeup.js",
     "loadsites": "loadsite.js",
     "runbash": "bin/runbash.js"
   },
@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/aminkhandesign/myclitools/issues"
   },
-  "homepage": "https://github.com/aminkhandesign/myclitools#readme"
+  "homepage": "https://github.com/aminkhandesign/myclitools#readme",
+  "dependencies": {
+    "playwright": "^1.21.0"
+  }
 }
