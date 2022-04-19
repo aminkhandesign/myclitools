@@ -44,10 +44,9 @@ export class LoginPage extends POM {
     await this.page.click("#login-submit-sc");
     //await expect(this.page).toHaveURL(this.BaseUrl + '/membership/myaacn')
     console.log(`logging in done, page now at ${this.page.url()}`);
-    await this.page.screenshot({ path: "loggedinBefore.png" });
     let message;
     // await Promise.all([
-    //   await this.page.waitForNavigation({ timeout: 180000 }),
+    await this.page.waitForNavigation({ timeout: 180000 });
     //   await this.page.screenshot({ path: "loggedin.png" }),
     // ]);
     if (new URL(this.page.url()).pathname === "/membership/myaacn") {
@@ -90,8 +89,7 @@ export class LoginPage extends POM {
    * @returns - an instance of the past in page which will be on the homescreen
    */
   static async isUserLoggedIn({ userName, page }) {
-    await page.goto("/");
-
+    await page.goto("/", { timeout: 180000 });
     let name = await page
       .locator(
         ".nav-utility > .nav__list > .nav__item > .item__label > .js-topmenu-username"
@@ -100,6 +98,11 @@ export class LoginPage extends POM {
 
     console.log(`Logged in as ${name ? name : "couldnt find user"} `);
 
+    if (name === userName) {
+      console.log(chalk.bold.greenBright("Logg-in was successful!!!"));
+    } else {
+      console.log(chalk.bold.redBright("There may be a problem logging!!"));
+    }
     return page;
   }
 }

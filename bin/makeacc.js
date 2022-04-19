@@ -60,7 +60,7 @@ async function runBrowser() {
   console.log("Check if log in was successful....");
 
   await LoginPage.isUserLoggedIn({
-    username: myRandomUser.FirstName,
+    userName: myRandomUser.FirstName,
     page: loggedInPage,
   });
 

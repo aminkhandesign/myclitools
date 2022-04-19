@@ -1,5 +1,6 @@
 import { POM } from "./pom_base.js";
 import { User } from "./user.js";
+import chalk, { Chalk } from "chalk";
 
 export class CreateAccountPage extends POM {
   path = "/membership/create-account";
@@ -33,7 +34,7 @@ export class CreateAccountPage extends POM {
 
     // actions
     await this.page.goto(this.BaseUrl + this.path);
-    console.log("PAGE NOW AT ", this.page.url());
+    console.log(chalk.bgBlue("PAGE NOW AT ", this.page.url()));
     // Click [placeholder="First\ Name"]
     await this.page
       .locator('[placeholder="First\\ Name"]', { timeout: 180000 })
@@ -63,8 +64,6 @@ export class CreateAccountPage extends POM {
     // Click text=Create eccount
     await this.page.locator("text=Create Account").click();
 
-
-    
     // Go to https://scqa.aacn.org/membership/membership-options
     //await this.page.waitForNavigation()
 
@@ -73,7 +72,6 @@ export class CreateAccountPage extends POM {
 
     // Click input[name="af3557a2-cc20-46f1-aa8a-97b1b37dde77-submit"]
 
-    
     await this.page
       .locator('input[name="af3557a2-cc20-46f1-aa8a-97b1b37dde77-submit"]')
       .click();
