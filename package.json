@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/aminkhandesign/myclitools#readme",
   "dependencies": {
+    "chalk": "^5.0.1",
     "playwright": "^1.21.0"
   }
 }
