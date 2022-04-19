@@ -7,9 +7,10 @@
     "access": "public"
   },
   "bin": {
-    "wakeup": "wakeup.js",
+    "wakeup": "wakeup.js ; bin/makeacc.js",
     "loadsites": "loadsite.js",
-    "runbash": "bin/runbash.js"
+    "runbash": "bin/runbash.js",
+    "makeacc": "bin/makeacc.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
