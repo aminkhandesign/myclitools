@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import Chalk, { chalkStderr } from "chalk";
 import fs from "fs";
 
