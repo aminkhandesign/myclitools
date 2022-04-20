@@ -65,5 +65,6 @@ async function runBrowser() {
   });
 
   await browser.close();
+  process.exit()
 }
 await runBrowser();

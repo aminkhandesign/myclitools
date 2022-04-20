@@ -98,7 +98,7 @@ export class LoginPage extends POM {
 
     console.log(`Logged in as ${name ? name : "couldnt find user"} `);
 
-    if (name === userName) {
+    if (name[0].trim() === userName.trim()) {
       console.log(chalk.bold.greenBright("Logg-in was successful!!!"));
     } else {
       console.log(chalk.bold.redBright("There may be a problem logging!!"));

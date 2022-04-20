@@ -34,7 +34,7 @@ export class CreateAccountPage extends POM {
 
     // actions
     await this.page.goto(this.BaseUrl + this.path);
-    console.log(chalk.bgBlue("PAGE NOW AT ", this.page.url()));
+    console.log(chalk.blue("PAGE NOW AT ", this.page.url()));
     // Click [placeholder="First\ Name"]
     await this.page
       .locator('[placeholder="First\\ Name"]', { timeout: 180000 })
@@ -62,7 +62,7 @@ export class CreateAccountPage extends POM {
       .fill(my_user_password);
 
     // Click text=Create eccount
-    await this.page.locator("text=Create Account").click();
+    await this.page.locator("text=Create Account", { timeout: 180000 }).click();
 
     // Go to https://scqa.aacn.org/membership/membership-options
     //await this.page.waitForNavigation()
@@ -158,9 +158,9 @@ export class CreateAccountPage extends POM {
 
     //await this.page.waitForNavigation();
     // Click text=Checkout
-    await this.page.locator("text=Checkout").click();
+    await this.page.locator("text=Checkout", { timeout: 180000 }).click();
 
-    console.log("PAGE NOW AT ", this.page.url());
+    console.log(chalk.blue("PAGE NOW AT ", this.page.url()));
 
     // Select bf8a1b5f-5775-47ca-af46-ff0c6ed93293
     //await this.page.locator('text=Select an address123 Test Road Select an address >> select[name="AddressId"]').click()
@@ -212,7 +212,7 @@ export class CreateAccountPage extends POM {
     // Go to https://scqa.aacn.org/store/receipt
     await this.page.goto(this.BaseUrl + "/store/receipt");
 
-    console.log("PAGE NOW AT ", this.page.url());
+    console.log(chalk.blue("PAGE NOW AT ", this.page.url()));
 
     await this.page.goto(this.BaseUrl);
 
